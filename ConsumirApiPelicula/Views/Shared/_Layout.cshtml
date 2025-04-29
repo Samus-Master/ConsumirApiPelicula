@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - ConsumirApiPelicula</title>
+
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	@* <link rel="stylesheet" href="~/ConsumirApiPelicula.styles.css" asp-append-version="true" /> *@
+
+	@* sweetalert2 *@
+	<link href="~/lib/sweetalert2/css/sweetalert2.min.css" rel="stylesheet" />
+
+
+	@* datatables *@
+	<link href="~/lib/datatables5/datatables.min.css" rel="stylesheet" />
+@* 	 <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+	 <link rel="stylesheet" href="~/lib/datatables/css/responsive.dataTables.min.css" /> *@
+	@* fontawesome *@
+	<link href="~/lib/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet" />
+	@* select2 *@
+	<link href="~/lib/select2-4.1.0-rc.0/dist/css/select2.css" rel="stylesheet" />
+	@* select2 boopstrap *@
+	<link href="~/lib/select2-bootstrap-5-theme-1.3.0/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
+	@* toastr *@
+	<link href="~/lib/toastr/css/toastr.min.css" rel="stylesheet" />
+
+	@await RenderSectionAsync("Styles", required: false)
+
+</head>
+<body class="bg-black">
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+			<div class="container-fluid">
+				<a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">ConsumirApiPelicula</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+					<ul class="navbar-nav flex-grow-1">
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Indexx">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Categoria" asp-action="Create">Categoria Create</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Pelicula" asp-action="Create">Pelicula Create</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white-50" asp-area="" asp-controller="Slider" asp-action="Create">Slider Create</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2025 - ConsumirApiPelicula - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	@* <script src="~/js/site.js" asp-append-version="true"></script> *@
+
+	@* datatable *@
+	<script src="~/lib/datatables5/datatables.min.js"></script>
+	@* <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="~/lib/datatables/js/dataTables.responsive.min.js"></script> *@
+
+	@* select2 *@
+	<script src="~/lib/select2-4.1.0-rc.0/dist/js/select2.js"></script>
+
+	@* sweetalert2 *@
+	<script src="~/lib/sweetalert2/js/sweetalert2.all.min.js"></script>
+
+	@* toastr *@
+	<script src="~/lib/toastr/js/toastr.min.js" rel="stylesheet"></script>
+
+
+
+@* 	<link href="https://cdn.datatables.net/v/bs5/dt-2.2.2/r-3.0.4/datatables.min.css" rel="stylesheet" integrity="sha384-GW6lzlXuHTZhTuGn1SwwSmDh83kRR/vBP2sXYIii05dmaeWUUiJbohXUZpRPQvF0" crossorigin="anonymous">
+
+	<script src="https://cdn.datatables.net/v/bs5/dt-2.2.2/r-3.0.4/datatables.min.js" integrity="sha384-5XApTld9Y3AZYCfuU2BG65HwDtV2x3RG7zxjNGDywmQmxRVo0VStT49jNd3JCpR4" crossorigin="anonymous"></script>
+ *@
+
+	<script type="text/javascript">
+		$.extend({ MisUrls: { url: {}, urls: function (a) { $.extend($.MisUrls.url, a); } } });
+
+		//Categoria
+		$.MisUrls.urls({ _ObtenerCategorias: '@Url.Action("GetAll", "Categoria")' });
+		$.MisUrls.urls({ _CrearCategoria: '@Url.Action("Create", "Categoria")' });
+		$.MisUrls.urls({ _EliminarCategoria: '@Url.Action("Delete", "Categoria")' });
+		$.MisUrls.urls({ _ActualizarCategoria: '@Url.Action("Update", "Categoria")' });
+
+		//Pelicula
+		$.MisUrls.urls({ _ObtenerPeliculas: '@Url.Action("GetAll", "Pelicula")' });
+		$.MisUrls.urls({ _ObtenerPeliculasIncludeCategoria: '@Url.Action("GetPeliculasIncludeCategoria", "Pelicula")' });
+		$.MisUrls.urls({ _CrearPelicula: '@Url.Action("Create", "Pelicula")' });
+		$.MisUrls.urls({ _EliminarPelicula: '@Url.Action("Delete", "Pelicula")' });
+		$.MisUrls.urls({ _ActualizarPelicula: '@Url.Action("Update", "Pelicula")' })
+
+		// Slider
+		$.MisUrls.urls({ _ObtenerSliders: '@Url.Action("GetAll", "Slider")' });
+		$.MisUrls.urls({ _CrearSlider: '@Url.Action("Create", "Slider")' });
+		$.MisUrls.urls({ _ActualizarSlider: '@Url.Action("Update", "Slider")' });
+		$.MisUrls.urls({ _EliminarSlider: '@Url.Action("Delete", "Slider")' });
+	</script>
+
+
+	@await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>

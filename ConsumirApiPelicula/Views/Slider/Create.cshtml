@@ -1,0 +1,46 @@
+﻿@using ConsumirApiPelicula.Models.ViewModel
+@model SliderViewModel;
+@{
+	ViewData["Title"] = "Crear Slider";
+}
+
+
+
+<div class="container-fluid">
+
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-11 d-flex justify-content-end mt-3">
+			<button class="btn btn-primary me-2" id="btnAgregarNuevoSlider" data-bs-toggle="tooltip" data-bs-placement="left" title="Crear Slider">
+				<i class="fa-solid fa-plus"></i>
+			</button>
+		</div>
+
+		<div class="col-12 col-lg-11">
+			<div class="table-responsive">
+				<table id="table" class="table" style="width:100%; text-align:left !important" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Pelicula</th>
+							<th>Estado</th>
+							<th>Opciones</th>
+						</tr>
+					</thead>
+					<tbody class="tableListSlidersTbody">
+					</tbody>
+
+
+				</table>
+			</div>
+		</div>
+
+
+		<partial name="_CrearSlider" />
+
+	</div>
+</div>
+
+@section Scripts {
+	<script src="~/js/Slider/CreateSlider.js"></script>
+	<partial name="_ValidationScriptsPartial" />
+}

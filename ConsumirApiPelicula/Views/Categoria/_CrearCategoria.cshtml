@@ -1,0 +1,37 @@
+﻿@using ApiPeliculas.Models.DTO
+@model CrearCategoriaDTO;
+@{
+}
+
+<!-- Modal -->
+<div class="modal fade" id="modalCrearCategoria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="false">
+	<div class="modal-dialog modal-xl modal-fullscreen-sm-down">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalTitle">Categoria</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body p-4 ">
+				<div asp-validation-summary="ModelOnly"></div>
+
+				<form class="form" method="POST" id="formCreateCategoria">
+
+					<div class="row gy-2">
+						<input id="id" type="hidden" />
+
+						<div class="form-group">
+							<label asp-for="Nombre" asp class="form-label"></label>
+							<input asp-for="Nombre" class="form-control" />
+							<span asp-validation-for="Nombre" class="alert-danger"></span>
+						</div>
+					</div>
+				</form>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+				<button type="button" id="modalBtnAceptar" class="btn btn-primary">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>

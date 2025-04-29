@@ -1,0 +1,68 @@
+﻿@using ApiPeliculas.Models
+@using ConsumirApiPelicula.Models.ViewModel
+
+
+@model PeliculaViewModel
+@{
+}
+
+<!-- Modal -->
+<div class="modal fade" id="modalCrearPelicula" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="false">
+	<div class="modal-dialog modal-xl modal-fullscreen-sm-down">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalTitle">Pelicula</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body p-4 ">
+				<div asp-validation-summary="ModelOnly"></div>
+
+				<form class="form" method="POST" id="formCreatePelicula">
+
+					<div class="row gy-1">
+						<div class="col-6">
+							<input id="PeliculaDTO_Id" type="hidden" />
+
+							<div class="form-group">
+								<label asp-for="@Model.PeliculaDTO.Nombre" asp class="col-form-label"></label>
+								<input asp-for="@Model.PeliculaDTO.Nombre" class="form-control" />
+								<span asp-validation-for="@Model.PeliculaDTO.Nombre" class="alert-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="@Model.PeliculaDTO.Descripcion" asp class="col-form-label"></label>
+								<input asp-for="@Model.PeliculaDTO.Descripcion" class="form-control" />
+								<span asp-validation-for="@Model.PeliculaDTO.Descripcion" class="alert-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="@Model.PeliculaDTO.Clasificacion" asp class="col-form-label"></label>
+								<select asp-for="@Model.PeliculaDTO.Clasificacion" asp-items="Html.GetEnumSelectList<TipoClasificacion>()" class="form-control"></select>
+								<span asp-validation-for="@Model.PeliculaDTO.Clasificacion" class="alert-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="@Model.PeliculaDTO.CategoriasId" asp class="col-form-label"></label>
+								@Html.DropDownListFor(m => m.PeliculaDTO.CategoriasId,
+																	Model.ListaCategorias,
+																	new { @class = "form-select", multiple = "multiple", data_placeholder = "Seleccione las categorias" })
+
+								<span asp-validation-for="@Model.PeliculaDTO.CategoriasId" class="alert-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="@Model.PeliculaDTO.RutaImagen" asp class="col-form-label"></label>
+								<input type="file" asp-for="@Model.PeliculaDTO.RutaImagen" class="form-control" />
+								<span asp-validation-for="@Model.PeliculaDTO.RutaImagen" class="alert-danger"></span>
+							</div>
+						</div>
+						<div class="col-6">
+							<img src="#" alt="Imagen de la pelicula" id="imgPreview" class="img-fluid w-100"/>
+						</div>
+					</div>
+				</form>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+				<button type="button" id="modalBtnAceptar" class="btn btn-primary">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>

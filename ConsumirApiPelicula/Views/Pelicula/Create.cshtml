@@ -1,0 +1,50 @@
+﻿@using ConsumirApiPelicula.Models.ViewModel
+
+@model PeliculaViewModel
+
+@{
+	ViewData["Title"] = "Crear Pelicula";
+}
+
+<div class="container-fluid">
+
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-11 d-flex justify-content-end mt-3">
+			<button class="btn btn-primary me-2" id="btnAgregarNuevaPelicula" data-bs-toggle="tooltip" data-bs-placement="left" title="Crear Pelicula">
+				<i class="fa-solid fa-plus"></i>
+			</button>
+		</div>
+
+		<div class="col-12 col-lg-11">
+			<div class="table-responsive">
+				<table id="table" class="table" style="width:100%; text-align:left !important" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Imagen</th>
+							<th>Nombre</th>
+							<th>Categorias</th>
+							<th>Opciones</th>
+						</tr>
+					</thead>
+					<tbody class="tableListPeliculasTbody">
+						<tr>
+							<td></td>
+						</tr>
+					</tbody>
+
+
+				</table>
+			</div>
+		</div>
+
+
+		<partial name="_modalPelicula" />
+
+	</div>
+</div>
+
+@section Scripts {
+	<script src="~/js/Pelicula/CreatePelicula.js"></script>
+	<partial name="_ValidationScriptsPartial" />
+}
