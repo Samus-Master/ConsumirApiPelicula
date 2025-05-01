@@ -79,8 +79,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Models\\DTO\\SliderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:50:13.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T02:50:13.037Z"
             }
           ]
         },
@@ -100,7 +99,7 @@
               "RelativeDocumentMoniker": "ConsumirApiPelicula\\Views\\Home\\Indexx.cshtml",
               "ToolTip": "C:\\Users\\cristian\\source\\repos\\ConsumirApiPelicula\\ConsumirApiPelicula\\Views\\Home\\Indexx.cshtml",
               "RelativeToolTip": "ConsumirApiPelicula\\Views\\Home\\Indexx.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwEUAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-29T03:42:24.9Z",
               "EditorCaption": ""
@@ -115,8 +114,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T03:19:19.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T03:19:19.952Z"
             },
             {
               "$type": "Document",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Servicios\\AuthService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAAB8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T03:12:00.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T03:12:00.906Z"
             },
             {
               "$type": "Document",
@@ -141,8 +138,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Servicios\\IServicios\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T03:11:05.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T03:11:05.934Z"
             },
             {
               "$type": "Document",
@@ -154,8 +150,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Servicios\\PeliculaService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T02:31:56.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T02:31:56.184Z"
             },
             {
               "$type": "Document",
@@ -167,8 +162,7 @@
               "RelativeToolTip": "ConsumirApiPelicula\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T02:24:44.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T02:24:44.244Z"
             }
           ]
         }
